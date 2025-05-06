@@ -1,0 +1,65 @@
+{
+  "type": "MethodDeclaration",
+  "children": [
+    {
+      "type": "SimpleName",
+      "summary": "solution"
+    },
+    {
+      "type": "ParameterList",
+      "children": [
+        {
+          "type": "Parameter",
+          "summary": "String my_string"
+        },
+        {
+          "type": "Parameter",
+          "summary": "String letter"
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "summary": "String answer = \"\""
+    },
+    {
+      "type": "VariableDeclaration",
+      "summary": "String[] arr = my_string.split(\"\")"
+    },
+    {
+      "type": "ForStmt",
+      "children": [
+        {
+          "type": "BinaryExpr",
+          "summary": "i < my_string.length()"
+        },
+        {
+          "type": "UnaryExpr",
+          "summary": "i++"
+        },
+        {
+          "type": "IfStmt",
+          "children": [
+            {
+              "type": "UnaryExpr",
+              "summary": "!arr[i].equals(letter)"
+            },
+            {
+              "type": "ExpressionStmt",
+              "summary": "answer += arr[i]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ReturnStmt",
+      "children": [
+        {
+          "type": "SimpleName",
+          "summary": "answer"
+        }
+      ]
+    }
+  ]
+}

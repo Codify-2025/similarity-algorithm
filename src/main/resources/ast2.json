@@ -1,0 +1,18 @@
+{
+  "type": "MethodDeclaration",
+  "children": [
+    {
+      "type": "SimpleName",
+      "summary": "sum"
+    },
+    {
+      "type": "ReturnStmt",
+      "children": [
+        {
+          "type": "BinaryExpr",
+          "summary": "x + y"
+        }
+      ]
+    }
+  ]
+}

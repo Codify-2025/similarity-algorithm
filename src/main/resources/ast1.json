@@ -1,0 +1,19 @@
+{
+  "type": "MethodDeclaration",
+  "children": [
+    {
+      "type": "SimpleName",
+      "summary": "add"
+    },
+    {
+      "type": "ReturnStmt",
+      "children": [
+        {
+          "type": "BinaryExpr",
+          "summary": "a + b"
+        }
+      ]
+    }
+  ]
+}
+

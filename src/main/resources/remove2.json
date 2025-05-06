@@ -1,0 +1,61 @@
+{
+  "type": "MethodDeclaration",
+  "children": [
+    {
+      "type": "SimpleName",
+      "summary": "removeLetter"
+    },
+    {
+      "type": "ParameterList",
+      "children": [
+        {
+          "type": "Parameter",
+          "summary": "String text"
+        },
+        {
+          "type": "Parameter",
+          "summary": "String ch"
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "summary": "String result = \"\""
+    },
+    {
+      "type": "VariableDeclaration",
+      "summary": "int count = 0"
+    },
+    {
+      "type": "WhileStmt",
+      "children": [
+        {
+          "type": "BinaryExpr",
+          "summary": "i < strlen(text)"
+        },
+        {
+          "type": "IfStmt",
+          "children": [
+            {
+              "type": "UnaryExpr",
+              "summary": "!text[i] == ch[0]"
+            },
+            {
+              "type": "ExpressionStmt",
+              "summary": "result[count++] = text[i]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ReturnStmt",
+      "children": [
+        {
+          "type": "SimpleName",
+          "summary": "result"
+        }
+      ]
+    }
+  ]
+}
