@@ -11,8 +11,8 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode ast1 = mapper.readTree(new File("src/main/resources/remove1.json"));
-        JsonNode ast2 = mapper.readTree(new File("src/main/resources/remove2.json"));
+        JsonNode ast1 = mapper.readTree(new File("src/main/resources/ast1.json"));
+        JsonNode ast2 = mapper.readTree(new File("src/main/resources/ast2.json"));
 
         var vec1 = ASTVectorizer.buildTypeVector(ast1);
         var vec2 = ASTVectorizer.buildTypeVector(ast2);
