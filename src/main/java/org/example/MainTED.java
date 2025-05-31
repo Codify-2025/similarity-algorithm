@@ -9,11 +9,11 @@ import org.example.similarity.TreeEditDistance;
 import java.io.File;
 
 public class MainTED {
-    public static void main(String[] args) throws Exception {
+    /*public static void main(String[] args) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
 
-        JsonNode ast1 = mapper.readTree(new File("src/main/resources/remove1.json"));
-        JsonNode ast2 = mapper.readTree(new File("src/main/resources/remove2.json"));
+        JsonNode ast1 = mapper.readTree(new File("src/main/resources/test1.json"));
+        JsonNode ast2 = mapper.readTree(new File("src/main/resources/test2.json"));
 
         // 변환
         TreeNode tree1 = TreeNodeBuilder.fromJson(ast1);
@@ -36,5 +36,5 @@ public class MainTED {
             count += countNodes(child);
         }
         return count;
-    }
+    }*/
 }
