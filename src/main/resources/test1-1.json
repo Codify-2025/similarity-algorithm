@@ -1,0 +1,1041 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "IncludeDirective",
+      "value": "#include <stdio.h>"
+    },
+    {
+      "type": "TypeAlias",
+      "children": [
+        {
+          "type": "Type",
+          "value": "unsigned int"
+        },
+        {
+          "type": "VariableName",
+          "value": "uint"
+        }
+      ]
+    },
+    {
+      "type": "TypeAlias",
+      "children": [
+        {
+          "type": "Type",
+          "value": "unsigned long long"
+        },
+        {
+          "type": "VariableName",
+          "value": "ull"
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "int"
+        },
+        {
+          "type": "VariableName",
+          "value": "base_list"
+        },
+        {
+          "type": "InitExpr",
+          "children": [
+            {
+              "type": "Literal",
+              "value": "2"
+            },
+            {
+              "type": "Literal",
+              "value": "7"
+            },
+            {
+              "type": "Literal",
+              "value": "61"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "MethodDeclaration",
+      "children": [
+        {
+          "type": "FunctionName",
+          "value": "fast_pow"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "ull"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "base"
+                }
+              ]
+            },
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "uint"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "exp"
+                }
+              ]
+            },
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "uint"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "mod"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BlockStmt",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "ull"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "result"
+                },
+                {
+                  "type": "InitExpr",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "WhileStmt",
+              "children": [
+                {
+                  "type": "BinaryExpr",
+                  "children": [
+                    {
+                      "type": "VariableName",
+                      "value": "exp"
+                    },
+                    {
+                      "type": "Operator",
+                      "value": ">"
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "type": "BlockStmt",
+                  "children": [
+                    {
+                      "type": "IfStmt",
+                      "children": [
+                        {
+                          "type": "BinaryExpr",
+                          "children": [
+                            {
+                              "type": "VariableName",
+                              "value": "exp"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "&"
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BlockStmt",
+                          "children": [
+                            {
+                              "type": "SimpleAssignExpr",
+                              "children": [
+                                {
+                                  "type": "VariableName",
+                                  "value": "result"
+                                },
+                                {
+                                  "type": "BinaryExpr",
+                                  "children": [
+                                    {
+                                      "type": "BinaryExpr",
+                                      "children": [
+                                        {
+                                          "type": "VariableName",
+                                          "value": "result"
+                                        },
+                                        {
+                                          "type": "Operator",
+                                          "value": "*"
+                                        },
+                                        {
+                                          "type": "VariableName",
+                                          "value": "base"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Operator",
+                                      "value": "%"
+                                    },
+                                    {
+                                      "type": "VariableName",
+                                      "value": "mod"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SimpleAssignExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "base"
+                        },
+                        {
+                          "type": "BinaryExpr",
+                          "children": [
+                            {
+                              "type": "BinaryExpr",
+                              "children": [
+                                {
+                                  "type": "VariableName",
+                                  "value": "base"
+                                },
+                                {
+                                  "type": "Operator",
+                                  "value": "*"
+                                },
+                                {
+                                  "type": "VariableName",
+                                  "value": "base"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "%"
+                            },
+                            {
+                              "type": "VariableName",
+                              "value": "mod"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SimpleAssignExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "exp"
+                        },
+                        {
+                          "type": "BinaryExpr",
+                          "children": [
+                            {
+                              "type": "VariableName",
+                              "value": "exp"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": ">>="
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStmt",
+              "children": [
+                {
+                  "type": "VariableName",
+                  "value": "result"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "MethodDeclaration",
+      "children": [
+        {
+          "type": "FunctionName",
+          "value": "is_probable_prime"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "uint"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "n"
+                }
+              ]
+            },
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "base"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BlockStmt",
+          "children": [
+            {
+              "type": "IfStmt",
+              "children": [
+                {
+                  "type": "BinaryExpr",
+                  "children": [
+                    {
+                      "type": "VariableName",
+                      "value": "base"
+                    },
+                    {
+                      "type": "Operator",
+                      "value": "%"
+                    },
+                    {
+                      "type": "VariableName",
+                      "value": "n"
+                    }
+                  ]
+                },
+                {
+                  "type": "ReturnStmt",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "uint"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "d"
+                },
+                {
+                  "type": "InitExpr",
+                  "children": [
+                    {
+                      "type": "BinaryExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "n"
+                        },
+                        {
+                          "type": "Operator",
+                          "value": "-"
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "WhileStmt",
+              "children": [
+                {
+                  "type": "BinaryExpr",
+                  "children": [
+                    {
+                      "type": "VariableName",
+                      "value": "d"
+                    },
+                    {
+                      "type": "Operator",
+                      "value": "%"
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "2"
+                    }
+                  ]
+                },
+                {
+                  "type": "BlockStmt",
+                  "children": [
+                    {
+                      "type": "IfStmt",
+                      "children": [
+                        {
+                          "type": "BinaryExpr",
+                          "children": [
+                            {
+                              "type": "MethodCallExpr",
+                              "children": [
+                                {
+                                  "type": "FunctionName",
+                                  "value": "fast_pow"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "VariableName",
+                                      "value": "base"
+                                    },
+                                    {
+                                      "type": "VariableName",
+                                      "value": "d"
+                                    },
+                                    {
+                                      "type": "VariableName",
+                                      "value": "n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "=="
+                            },
+                            {
+                              "type": "BinaryExpr",
+                              "children": [
+                                {
+                                  "type": "VariableName",
+                                  "value": "n"
+                                },
+                                {
+                                  "type": "Operator",
+                                  "value": "-"
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ReturnStmt",
+                          "children": [
+                            {
+                              "type": "Literal",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SimpleAssignExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "d"
+                        },
+                        {
+                          "type": "BinaryExpr",
+                          "children": [
+                            {
+                              "type": "VariableName",
+                              "value": "d"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "/"
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "2"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "uint"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "res"
+                },
+                {
+                  "type": "InitExpr",
+                  "children": [
+                    {
+                      "type": "MethodCallExpr",
+                      "children": [
+                        {
+                          "type": "FunctionName",
+                          "value": "fast_pow"
+                        },
+                        {
+                          "type": "Arguments",
+                          "children": [
+                            {
+                              "type": "VariableName",
+                              "value": "base"
+                            },
+                            {
+                              "type": "VariableName",
+                              "value": "d"
+                            },
+                            {
+                              "type": "VariableName",
+                              "value": "n"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStmt",
+              "children": [
+                {
+                  "type": "BinaryExpr",
+                  "children": [
+                    {
+                      "type": "BinaryExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "res"
+                        },
+                        {
+                          "type": "Operator",
+                          "value": "=="
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Operator",
+                      "value": "||"
+                    },
+                    {
+                      "type": "BinaryExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "res"
+                        },
+                        {
+                          "type": "Operator",
+                          "value": "=="
+                        },
+                        {
+                          "type": "BinaryExpr",
+                          "children": [
+                            {
+                              "type": "VariableName",
+                              "value": "n"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "-"
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "MethodDeclaration",
+      "children": [
+        {
+          "type": "FunctionName",
+          "value": "is_prime"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "uint"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BlockStmt",
+          "children": [
+            {
+              "type": "IfStmt",
+              "children": [
+                {
+                  "type": "BinaryExpr",
+                  "children": [
+                    {
+                      "type": "VariableName",
+                      "value": "n"
+                    },
+                    {
+                      "type": "Operator",
+                      "value": "<"
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "2"
+                    }
+                  ]
+                },
+                {
+                  "type": "ReturnStmt",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ForStmt",
+              "children": [
+                {
+                  "type": "BlockComment",
+                  "value": "for (int i = 0; i < 3; i++)"
+                },
+                {
+                  "type": "BlockStmt",
+                  "children": [
+                    {
+                      "type": "IfStmt",
+                      "children": [
+                        {
+                          "type": "UnaryExpr",
+                          "children": [
+                            {
+                              "type": "MethodCallExpr",
+                              "children": [
+                                {
+                                  "type": "FunctionName",
+                                  "value": "is_probable_prime"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "VariableName",
+                                      "value": "n"
+                                    },
+                                    {
+                                      "type": "ArrayAccessExpr",
+                                      "children": [
+                                        {
+                                          "type": "VariableName",
+                                          "value": "base_list"
+                                        },
+                                        {
+                                          "type": "Literal",
+                                          "value": "i"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ReturnStmt",
+                          "children": [
+                            {
+                              "type": "Literal",
+                              "value": "0"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStmt",
+              "children": [
+                {
+                  "type": "Literal",
+                  "value": "1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "MethodDeclaration",
+      "children": [
+        {
+          "type": "FunctionName",
+          "value": "main"
+        },
+        {
+          "type": "ParameterList",
+          "children": []
+        },
+        {
+          "type": "BlockStmt",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "T"
+                },
+                {
+                  "type": "InitExpr",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "count"
+                },
+                {
+                  "type": "InitExpr",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodCallExpr",
+              "children": [
+                {
+                  "type": "FunctionName",
+                  "value": "scanf"
+                },
+                {
+                  "type": "Arguments",
+                  "children": [
+                    {
+                      "type": "StringLiteral",
+                      "value": "\"%d\""
+                    },
+                    {
+                      "type": "AddressOf",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "T"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "WhileStmt",
+              "children": [
+                {
+                  "type": "UnaryExpr",
+                  "children": [
+                    {
+                      "type": "VariableName",
+                      "value": "T"
+                    },
+                    {
+                      "type": "Operator",
+                      "value": "--"
+                    }
+                  ]
+                },
+                {
+                  "type": "BlockStmt",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "uint"
+                        },
+                        {
+                          "type": "VariableName",
+                          "value": "x"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "MethodCallExpr",
+                      "children": [
+                        {
+                          "type": "FunctionName",
+                          "value": "scanf"
+                        },
+                        {
+                          "type": "Arguments",
+                          "children": [
+                            {
+                              "type": "StringLiteral",
+                              "value": "\"%u\""
+                            },
+                            {
+                              "type": "AddressOf",
+                              "children": [
+                                {
+                                  "type": "VariableName",
+                                  "value": "x"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "IfStmt",
+                      "children": [
+                        {
+                          "type": "MethodCallExpr",
+                          "children": [
+                            {
+                              "type": "FunctionName",
+                              "value": "is_prime"
+                            },
+                            {
+                              "type": "Arguments",
+                              "children": [
+                                {
+                                  "type": "BinaryExpr",
+                                  "children": [
+                                    {
+                                      "type": "BinaryExpr",
+                                      "children": [
+                                        {
+                                          "type": "Literal",
+                                          "value": "2"
+                                        },
+                                        {
+                                          "type": "Operator",
+                                          "value": "*"
+                                        },
+                                        {
+                                          "type": "VariableName",
+                                          "value": "x"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Operator",
+                                      "value": "+"
+                                    },
+                                    {
+                                      "type": "Literal",
+                                      "value": "1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "SimpleAssignExpr",
+                          "children": [
+                            {
+                              "type": "VariableName",
+                              "value": "count"
+                            },
+                            {
+                              "type": "BinaryExpr",
+                              "children": [
+                                {
+                                  "type": "VariableName",
+                                  "value": "count"
+                                },
+                                {
+                                  "type": "Operator",
+                                  "value": "+"
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodCallExpr",
+              "children": [
+                {
+                  "type": "FunctionName",
+                  "value": "printf"
+                },
+                {
+                  "type": "Arguments",
+                  "children": [
+                    {
+                      "type": "StringLiteral",
+                      "value": "\"%d\\n\""
+                    },
+                    {
+                      "type": "VariableName",
+                      "value": "count"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStmt",
+              "children": [
+                {
+                  "type": "Literal",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
