@@ -10,7 +10,6 @@ import org.example.similarity.TreeEditDistance;
 
 import java.io.File;
 import java.util.List;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -49,8 +48,10 @@ public class Main {
                     TreeNode tree1 = TreeNodeBuilder.fromJson(ast1);
                     TreeNode tree2 = TreeNodeBuilder.fromJson(ast2);
                     int ted = TreeEditDistance.compute(tree1, tree2);
-                    int maxSize = Math.max(countNodes(tree1), countNodes(tree2));
-                    double normalizedSim = 1.0 - ((double) ted / maxSize);
+
+                    // 평균 노드수 기반 정규화
+                    double avgSize = (countNodes(tree1) + countNodes(tree2)) / 2.0;
+                    double normalizedSim = 1.0 - (ted / avgSize);
 
                     System.out.printf("Tree Edit Distance: %d\n", ted);
                     System.out.printf("Normalized Similarity: %.3f\n", normalizedSim);
