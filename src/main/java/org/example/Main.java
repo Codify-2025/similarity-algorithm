@@ -17,10 +17,16 @@ public class Main {
 
         // 비교할 JSON 파일 리스트
         List<String> filenames = List.of(
-                "test1.json",
-                "test1-1.json",
-                "test2.json",
-                "test2-1.json"
+                // "test1.json",
+                // "test1-1.json",
+                // "test2.json",
+                // "test2-1.json",
+                // "test3.json",
+                // "test3-1.json",
+                // "test3-2.json"
+                "test4.json",
+                "test4-1.json",
+                "test4-2.json"
                 // 필요한 만큼 추가
         );
 
@@ -41,7 +47,7 @@ public class Main {
                 Map<String, Double> vec2 = ASTVectorizer.buildNormalizedTypeVector(ast2);
                 double cosineSim = CosineSimilarity.calculate(vec1, vec2);*/
 
-                System.out.printf("[%s vs %s] Cosine Similarity: %.3f\n", file1, file2, cosineSim);
+                System.out.printf("[%s vs %s]\nCosine Similarity: %.3f\n", file1, file2, cosineSim);
 
                 // 0.6 이상일 때만 2차 분석 수행
                 if (cosineSim >= 0.6) {

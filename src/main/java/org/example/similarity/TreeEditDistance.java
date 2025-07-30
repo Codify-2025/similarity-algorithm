@@ -9,11 +9,23 @@ import java.util.List;
 public class TreeEditDistance {
     public static int compute(TreeNode a, TreeNode b) {
         if (a == null && b == null) return 0;
-        if (a == null) return costInsertAll(b);
-        if (b == null) return costDeleteAll(a);
+        if (a == null) {
+            // 변수명만 대체한 경우의 원인을 파악하기 위한 로그
+            System.out.printf("Insert all: %s\n", b.label);
+            return costInsertAll(b);
+        }
+        if (b == null) {
+            // 변수명만 대체한 경우의 원인을 파악하기 위한 로그
+            System.out.printf("Delete all: %s\n", a.label);
+            return costDeleteAll(a);
+        }
 
         // 한 트리를 다른 트리로 바꾸기 위해 드는 비용 계산
         int cost = EditCost.renameCost(a, b);
+        // 변수명만 대체한 경우의 원인을 파악하기 위한 로그
+        if (cost > 0) {
+            System.out.printf("Rename: %s -> %s\n", a.label, b.label);
+        }
 
         List<TreeNode> aChildren = a.children;
         List<TreeNode> bChildren = b.children;
@@ -32,7 +44,19 @@ public class TreeEditDistance {
                     int delete = dp[i - 1][j] + costDelete(aChildren.get(i - 1));
                     int insert = dp[i][j - 1] + costInsert(bChildren.get(j - 1));
                     int rename = dp[i - 1][j - 1] + compute(aChildren.get(i - 1), bChildren.get(j - 1));
-                    dp[i][j] = Math.min(delete, Math.min(insert, rename)); // 최소 비용을 dp[i][j]에 저장
+
+                    // 최소 비용을 dp[i][j]에 저장
+                    int min = Math.min(delete, Math.min(insert, rename));
+                    dp[i][j] = min;
+
+                    // 변수명만 변경하는 경우를 위한 로그
+                    if (min == delete) {
+                        System.out.printf("Delete: %s\n", aChildren.get(i - 1).label);
+                    } else if (min == insert) {
+                        System.out.printf("Insert: %s\n", bChildren.get(j - 1).label);
+                    } else {
+                        // rename or match
+                    }
                 }
             }
         }

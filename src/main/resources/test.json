@@ -1,0 +1,26 @@
+{
+  "type": "TranslationUnitDecl",
+  "children": [
+    {
+      "type": "VarDecl",
+      "name": "x",
+      "children": [
+        { "type": "IntegerLiteral", "value": "1" }
+      ]
+    },
+    {
+      "type": "VarDecl",
+      "name": "y",
+      "children": [
+        {
+          "type": "BinaryOperator",
+          "operator": "+",
+          "children": [
+            { "type": "DeclRefExpr", "name": "x" },
+            { "type": "IntegerLiteral", "value": "2" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,649 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "IncludeDirective",
+      "value": "#include <iostream>"
+    },
+    {
+      "type": "UsingDirective",
+      "value": "using namespace std"
+    },
+    {
+      "type": "MethodDeclaration",
+      "children": [
+        {
+          "type": "FunctionName",
+          "value": "main"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "argc"
+                }
+              ]
+            },
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "char const*[]"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "argv"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BlockStmt",
+          "children": [
+            {
+              "type": "MethodCallExpr",
+              "children": [
+                {
+                  "type": "FunctionName",
+                  "value": "ios_base::sync_with_stdio"
+                },
+                {
+                  "type": "Arguments",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "false"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "a"
+                }
+              ]
+            },
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "b"
+                }
+              ]
+            },
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "VariableName",
+                  "value": "c"
+                }
+              ]
+            },
+            {
+              "type": "MethodCallExpr",
+              "children": [
+                {
+                  "type": "FunctionName",
+                  "value": "cin"
+                },
+                {
+                  "type": "Arguments",
+                  "children": [
+                    {
+                      "type": "VariableName",
+                      "value": "a"
+                    },
+                    {
+                      "type": "VariableName",
+                      "value": "b"
+                    },
+                    {
+                      "type": "VariableName",
+                      "value": "c"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "IfStmt",
+              "children": [
+                {
+                  "type": "BinaryExpr",
+                  "children": [
+                    {
+                      "type": "BinaryExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "a"
+                        },
+                        {
+                          "type": "Operator",
+                          "value": "!="
+                        },
+                        {
+                          "type": "VariableName",
+                          "value": "b"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Operator",
+                      "value": "&&"
+                    },
+                    {
+                      "type": "BinaryExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "b"
+                        },
+                        {
+                          "type": "Operator",
+                          "value": "!="
+                        },
+                        {
+                          "type": "VariableName",
+                          "value": "c"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Operator",
+                      "value": "&&"
+                    },
+                    {
+                      "type": "BinaryExpr",
+                      "children": [
+                        {
+                          "type": "VariableName",
+                          "value": "a"
+                        },
+                        {
+                          "type": "Operator",
+                          "value": "!="
+                        },
+                        {
+                          "type": "VariableName",
+                          "value": "c"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BlockStmt",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "int"
+                        },
+                        {
+                          "type": "VariableName",
+                          "value": "max"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "IfStmt",
+                      "children": [
+                        {
+                          "type": "BinaryExpr",
+                          "children": [
+                            {
+                              "type": "VariableName",
+                              "value": "a"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": ">"
+                            },
+                            {
+                              "type": "VariableName",
+                              "value": "b"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BlockStmt",
+                          "children": [
+                            {
+                              "type": "IfStmt",
+                              "children": [
+                                {
+                                  "type": "BinaryExpr",
+                                  "children": [
+                                    {
+                                      "type": "VariableName",
+                                      "value": "c"
+                                    },
+                                    {
+                                      "type": "Operator",
+                                      "value": ">"
+                                    },
+                                    {
+                                      "type": "VariableName",
+                                      "value": "a"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BlockStmt",
+                                  "children": [
+                                    {
+                                      "type": "SimpleAssignExpr",
+                                      "children": [
+                                        {
+                                          "type": "VariableName",
+                                          "value": "max"
+                                        },
+                                        {
+                                          "type": "VariableName",
+                                          "value": "c"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BlockStmt",
+                                  "children": [
+                                    {
+                                      "type": "SimpleAssignExpr",
+                                      "children": [
+                                        {
+                                          "type": "VariableName",
+                                          "value": "max"
+                                        },
+                                        {
+                                          "type": "VariableName",
+                                          "value": "a"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BlockStmt",
+                          "children": [
+                            {
+                              "type": "IfStmt",
+                              "children": [
+                                {
+                                  "type": "BinaryExpr",
+                                  "children": [
+                                    {
+                                      "type": "VariableName",
+                                      "value": "c"
+                                    },
+                                    {
+                                      "type": "Operator",
+                                      "value": ">"
+                                    },
+                                    {
+                                      "type": "VariableName",
+                                      "value": "b"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BlockStmt",
+                                  "children": [
+                                    {
+                                      "type": "SimpleAssignExpr",
+                                      "children": [
+                                        {
+                                          "type": "VariableName",
+                                          "value": "max"
+                                        },
+                                        {
+                                          "type": "VariableName",
+                                          "value": "c"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BlockStmt",
+                                  "children": [
+                                    {
+                                      "type": "SimpleAssignExpr",
+                                      "children": [
+                                        {
+                                          "type": "VariableName",
+                                          "value": "max"
+                                        },
+                                        {
+                                          "type": "VariableName",
+                                          "value": "b"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "MethodCallExpr",
+                      "children": [
+                        {
+                          "type": "FunctionName",
+                          "value": "cout"
+                        },
+                        {
+                          "type": "Arguments",
+                          "children": [
+                            {
+                              "type": "BinaryExpr",
+                              "children": [
+                                {
+                                  "type": "VariableName",
+                                  "value": "max"
+                                },
+                                {
+                                  "type": "Operator",
+                                  "value": "*"
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "100"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BlockStmt",
+                  "children": [
+                    {
+                      "type": "IfStmt",
+                      "children": [
+                        {
+                          "type": "BinaryExpr",
+                          "children": [
+                            {
+                              "type": "VariableName",
+                              "value": "a"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "=="
+                            },
+                            {
+                              "type": "VariableName",
+                              "value": "b"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "&&"
+                            },
+                            {
+                              "type": "VariableName",
+                              "value": "a"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "=="
+                            },
+                            {
+                              "type": "VariableName",
+                              "value": "c"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BlockStmt",
+                          "children": [
+                            {
+                              "type": "MethodCallExpr",
+                              "children": [
+                                {
+                                  "type": "FunctionName",
+                                  "value": "cout"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "BinaryExpr",
+                                      "children": [
+                                        {
+                                          "type": "Literal",
+                                          "value": "10000"
+                                        },
+                                        {
+                                          "type": "Operator",
+                                          "value": "+"
+                                        },
+                                        {
+                                          "type": "BinaryExpr",
+                                          "children": [
+                                            {
+                                              "type": "VariableName",
+                                              "value": "a"
+                                            },
+                                            {
+                                              "type": "Operator",
+                                              "value": "*"
+                                            },
+                                            {
+                                              "type": "Literal",
+                                              "value": "1000"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BlockStmt",
+                          "children": [
+                            {
+                              "type": "IfStmt",
+                              "children": [
+                                {
+                                  "type": "BinaryExpr",
+                                  "children": [
+                                    {
+                                      "type": "VariableName",
+                                      "value": "a"
+                                    },
+                                    {
+                                      "type": "Operator",
+                                      "value": "=="
+                                    },
+                                    {
+                                      "type": "VariableName",
+                                      "value": "b"
+                                    },
+                                    {
+                                      "type": "Operator",
+                                      "value": "||"
+                                    },
+                                    {
+                                      "type": "VariableName",
+                                      "value": "a"
+                                    },
+                                    {
+                                      "type": "Operator",
+                                      "value": "=="
+                                    },
+                                    {
+                                      "type": "VariableName",
+                                      "value": "c"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BlockStmt",
+                                  "children": [
+                                    {
+                                      "type": "MethodCallExpr",
+                                      "children": [
+                                        {
+                                          "type": "FunctionName",
+                                          "value": "cout"
+                                        },
+                                        {
+                                          "type": "Arguments",
+                                          "children": [
+                                            {
+                                              "type": "BinaryExpr",
+                                              "children": [
+                                                {
+                                                  "type": "Literal",
+                                                  "value": "1000"
+                                                },
+                                                {
+                                                  "type": "Operator",
+                                                  "value": "+"
+                                                },
+                                                {
+                                                  "type": "BinaryExpr",
+                                                  "children": [
+                                                    {
+                                                      "type": "VariableName",
+                                                      "value": "a"
+                                                    },
+                                                    {
+                                                      "type": "Operator",
+                                                      "value": "*"
+                                                    },
+                                                    {
+                                                      "type": "Literal",
+                                                      "value": "100"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BlockStmt",
+                                  "children": [
+                                    {
+                                      "type": "MethodCallExpr",
+                                      "children": [
+                                        {
+                                          "type": "FunctionName",
+                                          "value": "cout"
+                                        },
+                                        {
+                                          "type": "Arguments",
+                                          "children": [
+                                            {
+                                              "type": "BinaryExpr",
+                                              "children": [
+                                                {
+                                                  "type": "Literal",
+                                                  "value": "1000"
+                                                },
+                                                {
+                                                  "type": "Operator",
+                                                  "value": "+"
+                                                },
+                                                {
+                                                  "type": "BinaryExpr",
+                                                  "children": [
+                                                    {
+                                                      "type": "VariableName",
+                                                      "value": "b"
+                                                    },
+                                                    {
+                                                      "type": "Operator",
+                                                      "value": "*"
+                                                    },
+                                                    {
+                                                      "type": "Literal",
+                                                      "value": "100"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStmt",
+              "children": [
+                {
+                  "type": "Literal",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
